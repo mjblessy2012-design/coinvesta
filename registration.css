@@ -1,0 +1,427 @@
+/* =====================================
+   CoinVesta Registration Form
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#000000,#1a1a1a,#2c2c2c);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    color:white;
+}
+
+.container{
+    width: 650px;
+    background:#111;
+    padding:35px;
+    border-radius:20px;
+    border:2px solid gold;
+    box-shadow:0 0 20px rgba(255,215,0,0.4);
+}
+
+h1{
+    text-align:center;
+    color:#FFD700;
+    margin-bottom:10px;
+    font-size:40px;
+}
+
+h2{
+    text-align:center;
+    color:white;
+    margin-bottom:10px;
+}
+
+p{
+    text-align:center;
+    color:#cccccc;
+    margin-bottom:25px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:6px;
+    font-weight:bold;
+    color:#FFD700;
+}
+
+input,
+select{
+    width:100%;
+    padding:12px;
+    border:1px solid #FFD700;
+    border-radius:8px;
+    background:#222;
+    color:white;
+    font-size:15px;
+}
+
+input:focus,
+select:focus{
+    outline:none;
+    border-color:white;
+    box-shadow:0 0 8px gold;
+}
+
+.radio-group{
+    display:flex;
+    gap:20px;
+    margin-top:8px;
+    margin-bottom:15px;
+}
+
+.radio-group input{
+    width:auto;
+}
+
+input[type="checkbox"]{
+    width:auto;
+    margin-right:8px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:space-between;
+    margin-top:30px;
+}
+
+button{
+    width:48%;
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    background:#FFD700;
+    color:black;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:white;
+    transform:scale(1.05);
+}
+
+@media(max-width:500px){
+
+.container{
+    width:90%;
+}
+
+.radio-group{
+    flex-direction:column;
+    gap:10px;
+}
+
+.buttons{
+    flex-direction:column;
+}
+
+button{
+    width:100%;
+    margin-bottom:10px;
+}
+
+}
+/* =======================================
+   Premium Success Popup
+======================================= */
+
+.popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(8px);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.popup-card{
+
+    width:430px;
+
+    background:linear-gradient(145deg,#181818,#101010);
+
+    border:2px solid #FFD700;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 0 15px #FFD700,
+    0 0 40px rgba(255,215,0,.3);
+
+    animation:popupZoom .5s ease;
+
+}
+
+/* Gold Glow */
+
+.popup-glow{
+
+    position:absolute;
+
+    top:-120px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:220px;
+    height:220px;
+
+    background:radial-gradient(circle,
+    rgba(255,215,0,.45),
+    transparent 70%);
+
+}
+
+/* Success Circle */
+
+.success-circle{
+
+    width:110px;
+    height:110px;
+
+    border-radius:50%;
+
+    margin:auto;
+
+    background:#22c55e;
+
+    color:white;
+
+    font-size:55px;
+
+    line-height:110px;
+
+    border:5px solid #FFD700;
+
+    box-shadow:
+    0 0 20px #22c55e,
+    0 0 45px rgba(34,197,94,.6);
+
+    animation:pulse 1.8s infinite;
+
+}
+
+/* Heading */
+
+.popup-card h2{
+
+    color:#FFD700;
+
+    margin-top:25px;
+
+    font-size:32px;
+
+}
+
+/* Gold Divider */
+
+.gold-line{
+
+    width:220px;
+
+    margin:20px auto;
+
+    border-top:2px solid #FFD700;
+
+    position:relative;
+
+}
+
+.gold-line span{
+
+    position:absolute;
+
+    left:50%;
+
+    top:-15px;
+
+    transform:translateX(-50%);
+
+    background:#111;
+
+    color:#FFD700;
+
+    padding:0 10px;
+
+}
+
+/* Message */
+
+.message{
+
+    font-size:17px;
+
+    color:#eeeeee;
+
+    line-height:30px;
+
+}
+
+.message span{
+
+    color:#FFD700;
+
+    font-weight:bold;
+
+}
+
+/* Logo */
+
+.logo{
+
+    margin-top:25px;
+
+}
+
+.coin-logo{
+
+    width:75px;
+
+    height:75px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#FFD700;
+
+    color:black;
+
+    font-size:40px;
+
+    line-height:75px;
+
+    box-shadow:0 0 18px gold;
+
+}
+
+.logo h3{
+
+    margin-top:15px;
+
+    font-size:32px;
+
+    color:white;
+
+}
+
+.logo h3 span{
+
+    color:#FFD700;
+
+}
+
+.logo small{
+
+    color:#FFD700;
+
+    letter-spacing:2px;
+
+}
+
+/* Button */
+
+.continue-btn{
+
+    width:190px;
+
+    margin-top:30px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#FFD700;
+
+    color:black;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+.continue-btn:hover{
+
+    background:white;
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 20px gold;
+
+}
+
+/* Animations */
+
+@keyframes popupZoom{
+
+0%{
+
+transform:scale(.4);
+
+opacity:0;
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}

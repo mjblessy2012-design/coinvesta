@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CoinVesta - User Registration</title>
+
+    <link rel="stylesheet" href="registration.css">
+
+</head>
+<!-- ============================= -->
+<!-- CoinVesta Success Popup -->
+<!-- ============================= -->
+
+<div id="successPopup" class="popup">
+
+    <div class="popup-card">
+
+        <!-- Decorative Glow -->
+        <div class="popup-glow"></div>
+
+        <!-- Success Icon -->
+        <div class="success-circle">
+            ✔
+        </div>
+
+        <!-- Heading -->
+        <h2>Registration Successful!</h2>
+
+        <!-- Gold Divider -->
+        <div class="gold-line">
+            <span>◆</span>
+        </div>
+
+        <!-- Message -->
+        <p class="message">
+            Welcome to <span>CoinVesta</span>.<br>
+            You are now part of our crypto community.
+        </p>
+
+        <!-- Logo -->
+        <div class="logo">
+
+            <div class="coin-logo">
+                🪙
+            </div>
+
+            <h3>Coin<span>Vesta</span></h3>
+
+            <small>TRACK | ANALYZE | INVEST</small>
+
+        </div>
+
+        <!-- Continue Button -->
+        <button class="continue-btn" onclick="closePopup()">
+
+            Continue →
+
+        </button>
+
+    </div>
+
+</div>
+
+<body>
+
+    <div class="container">
+
+        <h1>🪙 CoinVesta</h1>
+
+        <h2>User Registration Form</h2>
+
+        <p>Create your CoinVesta account and explore the world of cryptocurrency.</p>
+
+        <form id="registrationForm">
+
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name">
+
+            <label>Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label>Mobile Number</label>
+            <input type="text" id="mobile" placeholder="Enter your mobile number">
+
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Create password">
+
+            <label>Confirm Password</label>
+            <input type="password" id="confirmPassword" placeholder="Confirm password">
+
+            <label>Country</label>
+
+            <select id="country">
+                <option value="">-- Select Country --</option>
+                <option>India</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+                <option>Canada</option>
+                <option>Australia</option>
+                <option>Singapore</option>
+            </select>
+
+            <label>Favorite Cryptocurrency</label>
+
+            <select id="crypto">
+                <option value="">-- Select Cryptocurrency --</option>
+                <option>Bitcoin</option>
+                <option>Ethereum</option>
+                <option>Solana</option>
+                <option>Binance Coin</option>
+            </select>
+
+            <label>Date of Birth</label>
+            <input type="date" id="dob">
+
+            <label>Gender</label>
+
+            <div class="radio-group">
+                <input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="Female"> Female
+                <input type="radio" name="gender" value="Other"> Other
+            </div>
+
+            <label>
+                <input type="checkbox" id="terms">
+                I accept the Terms and Conditions
+            </label>
+
+            <div class="buttons">
+
+                <button type="button" onclick="validateForm()">
+                    Register
+                </button>
+
+                <button type="reset">
+                    Reset
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="registration.js"></script>
+
+</body>
+
+</html>
